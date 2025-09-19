@@ -1,0 +1,41 @@
+meta {
+  name: Create Order
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/orders
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{accessToken}}
+}
+
+body:json {
+  {
+    "shippingAddress": "Mars"
+  }
+}
+
+tests {
+  // Check if the request was successful
+  if (res.getStatus() === 200 || res.getStatus() === 201) {
+      // Parse the response body
+      var jsonData = res.getBody();
+      
+      // Check if the order has an ID
+      if (jsonData && jsonData.id) {
+          // Store the order ID in the environment
+          bru.setEnvVar('order_id', jsonData.id);
+          console.log('Order ID saved to environment: ' + jsonData.id);
+      }
+  }
+}
+
+docs {
+  Create a new order using the items in the user's cart
+}

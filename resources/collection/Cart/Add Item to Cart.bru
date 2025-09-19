@@ -1,0 +1,30 @@
+meta {
+  name: Add Item to Cart
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/cart/add/item/:itemId
+  body: json
+  auth: none
+}
+
+params:path {
+  itemId: cd3ad475-0784-4a0d-9fe4-a9a17e5391d9
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{accessToken}}
+}
+
+body:json {
+  { 
+    "quantity": 2
+  }
+}
+
+docs {
+  Add a product to the user's shopping cart
+}

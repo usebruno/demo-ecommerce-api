@@ -1,0 +1,23 @@
+meta {
+  name: Get Order by ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/orders/:orderId
+  body: none
+  auth: none
+}
+
+params:path {
+  orderId: 9c4d1e4f-64dd-465a-b52a-5471caab828b
+}
+
+headers {
+  Authorization: Bearer {{accessToken}}
+}
+
+docs {
+  Retrieve detailed information about a specific order
+}

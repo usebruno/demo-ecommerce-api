@@ -1,0 +1,19 @@
+meta {
+  name: Clear Cart
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/cart
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{accessToken}}
+}
+
+docs {
+  Remove all items from the user's cart
+}

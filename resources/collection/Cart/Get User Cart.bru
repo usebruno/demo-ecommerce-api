@@ -1,0 +1,19 @@
+meta {
+  name: Get User Cart
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/cart
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{accessToken}}
+}
+
+docs {
+  Retrieve the current user's shopping cart
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Whoami
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/auth/whoami
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{accessToken}}
+}
+
+docs {
+  Retrieve authenticated user's profile information
+}

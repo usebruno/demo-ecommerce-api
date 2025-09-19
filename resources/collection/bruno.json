@@ -1,0 +1,11 @@
+{
+  "version": "1",
+  "name": "E-commerce API",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "size": 0.005913734436035156,
+  "filesCount": 22
+}

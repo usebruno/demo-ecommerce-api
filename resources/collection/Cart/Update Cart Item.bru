@@ -1,0 +1,30 @@
+meta {
+  name: Update Cart Item
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/cart/item/:itemId
+  body: json
+  auth: none
+}
+
+params:path {
+  itemId: cd3ad475-0784-4a0d-9fe4-a9a17e5391d9
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{accessToken}}
+}
+
+body:json {
+  {
+    "quantity": 5
+  }
+}
+
+docs {
+  Update the quantity of an item in the cart
+}

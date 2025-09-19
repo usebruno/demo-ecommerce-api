@@ -1,0 +1,23 @@
+meta {
+  name: Remove Item from Cart
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/cart/item/:itemId
+  body: none
+  auth: none
+}
+
+params:path {
+  itemId: cd3ad475-0784-4a0d-9fe4-a9a17e5391d9
+}
+
+headers {
+  Authorization: Bearer {{accessToken}}
+}
+
+docs {
+  Remove a specific item from the cart
+}

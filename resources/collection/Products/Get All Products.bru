@@ -1,0 +1,19 @@
+meta {
+  name: Get All Products
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/products
+  body: none
+  auth: none
+}
+
+params:query {
+  ~category: electronics
+}
+
+docs {
+  Retrieve a list of all products, optionally filtered by category. Default seeded categories include: Electronics, Sports, and Home.
+}
