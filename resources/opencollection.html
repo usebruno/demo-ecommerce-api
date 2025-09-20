@@ -1,0 +1,30 @@
+<head>
+	<title>OpenCollection</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		#opencollection-container {
+			width: 100vw;
+			height: 100vh;
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdn.opencollection.com/core.css">
+	<script src="https://cdn.opencollection.com/playground.umd.js"></script>
+</head>
+
+
+<body>
+	<div id="opencollection-container"></div>
+	<script>
+		const container = document.getElementById('opencollection-container');
+		
+		new window.OpenCollection({
+			target: container,
+			opencollection: sampleCollection,
+			theme: 'light'
+		});
+	</script>
+</body>
+</html> 

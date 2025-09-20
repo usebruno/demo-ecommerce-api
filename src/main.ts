@@ -12,8 +12,10 @@ async function bootstrap() {
   // Enable validation
   app.useGlobalPipes(new ValidationPipe());
   
-  // Add global prefix for all routes
-  app.setGlobalPrefix('api');
+  // Add global prefix for all routes except opencollection
+  app.setGlobalPrefix('api', {
+    exclude: ['opencollection']
+  });
   
   // Swagger configuration
   const config = new DocumentBuilder()

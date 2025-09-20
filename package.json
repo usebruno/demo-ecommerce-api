@@ -23,6 +23,7 @@
     "bcryptjs": "^2.4.3",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
+    "js-yaml": "^4.1.0",
     "sqlite3": "^5.1.7",
     "swagger-ui-express": "^5.0.1",
     "typeorm": "^0.3.17",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@nestjs/cli": "^11.0.10",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.5.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
